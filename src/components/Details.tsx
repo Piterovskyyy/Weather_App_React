@@ -9,6 +9,8 @@ import WeatherMaps from "./DetailComponents/WeatherMaps";
 import WeatherConditions from "./DetailComponents/WeatherConditions";
 import MainDetails from "./DetailComponents/MainDetails";
 const API_KEY = import.meta.env.VITE_API_KEY;
+
+console.log(API_KEY);
 const Details = () => {
   const { weatherData, weatherForecastData, iconURL } = useLoaderData() as {
     weatherData: weatherDataInterface;
