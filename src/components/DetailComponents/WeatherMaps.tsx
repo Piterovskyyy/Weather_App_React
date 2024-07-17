@@ -7,12 +7,20 @@ import PrecipitationSvg from "./WeatherConditionsSvg/PrecipitationSvg";
 import PressureSvg from "./WeatherConditionsSvg/PressureSvg";
 import WindSpeedSvg from "./WeatherConditionsSvg/WindSpeedSvg";
 import TemperatureSvg from "./WeatherConditionsSvg/TemperatureSvg";
+import markerIconUrl from "../../../public/images/marker-icon.png";
+import L from "leaflet";
+
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 const WeatherMaps: React.FC<{ weatherData: weatherDataInterface }> = ({
   weatherData,
 }) => {
   const [mapLayer, setMapLayer] = useState("clouds_new");
+
+  const customIcon = L.icon({
+    iconUrl: markerIconUrl,
+    iconSize: [40, 40], // Rozmiar ikony: szerokość x wysokość
+  });
 
   return (
     <div className="flex flex-col p-3 w-full space-y-2 h-[500px] lg:h-full">
@@ -106,11 +114,10 @@ const WeatherMaps: React.FC<{ weatherData: weatherDataInterface }> = ({
               url={`https://tile.openweathermap.org/map/${mapLayer}/{z}/{x}/{y}.png?appid=${API_KEY}`}
               attribution='&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>'
             />
-            <Marker position={[weatherData.coord.lat, weatherData.coord.lon]}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
-            </Marker>
+            <Marker
+              position={[weatherData.coord.lat, weatherData.coord.lon]}
+              icon={customIcon}
+            ></Marker>
           </MapContainer>
         </div>
       </div>
