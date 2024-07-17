@@ -41,7 +41,7 @@ const Header = () => {
       setCityNameMobile("");
       timeOut = setTimeout(() => {
         acutoComplate(cityName);
-      }, 100);
+      }, 300);
     } else {
       setAutoComplateData(null);
     }
@@ -49,14 +49,14 @@ const Header = () => {
       setCityName("");
       timeOut = setTimeout(() => {
         acutoComplate(cityNameMobile);
-      }, 100);
+      }, 300);
     } else {
       setAutoComplateData(null);
     }
 
     return () => {
       clearTimeout(timeOut);
-      controller.abort();
+      // controller.abort();
     };
   }, [cityName, cityNameMobile]);
 

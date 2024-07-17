@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import NavPanelElement from "./NavPanelElement";
 import { useFavouriteCities } from "../../Context/FavouriteCitiesContext";
 import {

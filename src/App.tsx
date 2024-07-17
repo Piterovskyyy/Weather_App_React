@@ -1,4 +1,3 @@
-import React from "react";
 import RootLayout from "./Layouts/RootLayout";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -12,7 +11,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      // { path: "/", element: <NavPanel /> },
       {
         path: "/:cityName",
         element: <Details />,
