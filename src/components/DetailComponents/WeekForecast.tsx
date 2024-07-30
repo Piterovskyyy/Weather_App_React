@@ -57,7 +57,7 @@ const WeekForecast: React.FC<{
       </div>
 
       <div className="flex justify-start items-centerv overflow-y-auto w-full">
-        <ul className="w-full px-6">
+        <ul className="w-full px-2 md:px-6">
           {filterWeatherForecastData.map((dayData) => (
             <WeekForecastListElement
               key={dayData.dt}

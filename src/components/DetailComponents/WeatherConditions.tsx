@@ -22,7 +22,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <PressureSvg />
               <div className="flex flex-col">
                 <span>Ground level</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.main.grnd_level} hPa
                 </span>
               </div>
@@ -31,7 +31,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <PressureSvg />
               <div className="flex flex-col">
                 <span>Sea level</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.main.sea_level} hPa
                 </span>
               </div>
@@ -42,7 +42,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <CloudSvg />
               <div className="flex flex-col">
                 <span>Cloudiness</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.clouds.all} %
                 </span>
               </div>
@@ -51,7 +51,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <PrecipitationSvg />
               <div className="flex flex-col">
                 <span>Rain</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.rain
                     ? weatherData.rain["1h"]
                       ? weatherData.rain["1h"]
@@ -69,7 +69,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <HumiditySvg />
               <div className="flex flex-col">
                 <span>Humidity</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.main.humidity} %
                 </span>
               </div>
@@ -78,7 +78,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <VisibilitySvg />
               <div className="flex flex-col">
                 <span>Visibility</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.visibility} m
                 </span>
               </div>
@@ -89,7 +89,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <WindSpeedSvg />
               <div className="flex flex-col">
                 <span>Wind speed</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.wind.speed} m/s
                 </span>
               </div>
@@ -98,7 +98,7 @@ const WeatherConditions: React.FC<{ weatherData: weatherDataInterface }> = ({
               <WindDirectionSvg />
               <div className="flex flex-col">
                 <span>Wind direction</span>
-                <span className="text-2xl font-bold">
+                <span className="text-xl md:text-2xl font-bold">
                   {weatherData.wind.deg} deg
                 </span>
               </div>

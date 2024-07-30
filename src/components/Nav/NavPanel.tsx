@@ -28,9 +28,11 @@ const NavPanel = () => {
 
   return (
     <nav
-      className={`hidden items-start ${
-        isNavOpen ? "w-72" : "w-16"
-      } min-h-full p-4 space-x-2 bg-[#D0E5F2]/50 backdrop-blur-md rounded-tr-2xl rounded-br-2xl duration-300 absolute z-50 md:flex`}
+      className={`flex items-start ${
+        isNavOpen
+          ? "w-full bg-[#D0E5F2]/50 backdrop-blur-md md:w-72"
+          : "w-16 md:bg-[#D0E5F2]/50 md:backdrop-blur-md"
+      } min-h-full p-4 space-x-2  md:rounded-tr-2xl md:rounded-br-2xl duration-300 absolute z-50`}
     >
       {isNavOpen && (
         <div className="flex-1 h-full pt-12 text-white text-xl duration-200 text-center">

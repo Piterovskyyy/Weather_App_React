@@ -64,28 +64,30 @@ const MainDetails: React.FC<{
     <div className="flex justify-between w-full p-3 relative md:p-4">
       <div className="flex flex-col items-start space-y-3">
         <div className="flex flex-col space-y-1">
-          <h2 className="text-3xl">{weatherData.name}</h2>
-          <h3>{date}</h3>
+          <h2 className="text-2xl md:text-3xl">{weatherData.name}</h2>
+          <h3 className="text-sm md:text-base">{date}</h3>
         </div>
         <div className="flex flex-col space-y-1">
-          <h1 className="text-5xl font-bold ">
+          <h1 className="text-4xl md:text-5xl font-bold ">
             {Math.floor(weatherData.main.temp - 273.15)}&#176;
           </h1>
-          <h3 className="text-xl">{weatherData.weather[0].description}</h3>
+          <h3 className="text-lg md:text-xl">
+            {weatherData.weather[0].description}
+          </h3>
         </div>
         <div className="flex flex-col md:flex-row md:space-x-1">
-          <h3 className="text-xl">
+          <h3 className="text-lg md:text-xl">
             {Math.floor(weatherData.main.temp_max - 273.15)}&#176; /{" "}
             {Math.floor(weatherData.main.temp_min - 273.15)}&#176;
           </h3>
-          <h3 className="text-xl">
+          <h3 className="text-lg md:text-xl">
             Real Feel {Math.floor(weatherData.main.feels_like - 273.15)}
             &#176;
           </h3>
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <img src={iconURL} alt="icon" className="h-48 w-48" />
+        <img src={iconURL} alt="icon" className="h-36 w-36 md:h-48 md:w-48" />
       </div>
       {isFavourite ? (
         <button
