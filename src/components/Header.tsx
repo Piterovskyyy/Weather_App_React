@@ -89,29 +89,31 @@ const Header = () => {
   };
 
   return (
-    <header className="flex flex-col p-4 mx-auto items-center space-y-2 md:flex-row md:space-y-0 w-full md:mx-0 md:justify-between md:px-12 lg:px-24 md:space-x-6 ">
+    <header className="flex flex-col py-4 px-8 items-center space-y-3 md:flex-row md:space-y-0 w-full md:mx-0 md:justify-between md:px-12 md:space-x-6 ">
       <Link to="/">
-        <h1 className="font-bold text-2xl md:text-4xl">Weather App</h1>
+        <h1 className="font-bold text-2xl text-white md:text-4xl">
+          Weather App
+        </h1>
       </Link>
-      <div className="relative flex-1 max-w-md hidden md:block">
-        <form
-          onSubmit={onSearchCity}
-          className="hidden relative rounded-lg py-2 px-6 space-x-6 items-center bg-gray-200 md:flex z-50"
-        >
+      <div className="relative flex-1 max-w-lg hidden md:block">
+        <form onSubmit={onSearchCity} className="flex items-center w-full">
           <input
             type="text"
-            className="rounded-lg flex-1 outline-none hidden md:block  bg-gray-200"
+            className="rounded-tl-lg rounded-bl-lg flex-1 outline-none block bg-white p-2 px-4"
             placeholder="Search City"
             onChange={changeCityName}
             value={cityName}
           />
-          <button className="flex items-center justify-center " type="submit">
+          <button
+            className="flex items-center justify-center p-2 px-4 rounded-tr-lg rounded-br-lg bg-white outline-none border-none"
+            type="submit"
+          >
             SEARCH
           </button>
         </form>
         {autoComplateData?.data ? (
           autoComplateData?.data.length > 0 ? (
-            <div className="absolute top-8 pt-2 left-0 w-full bg-gray-200 z-20  rounded-b-2xl">
+            <div className="absolute top-8 pt-2 left-0 w-full bg-white z-20  rounded-b-2xl">
               <ul className="max-h-28 overflow-auto flex flex-col items-center p-2">
                 {autoComplateData?.data
                   .filter((element) => element.type == "CITY")
@@ -135,19 +137,19 @@ const Header = () => {
         ) : null}
       </div>
       <Timer />
-      <div className="relative flex-1 max-w-md md:hidden">
-        <form
-          onSubmit={onSearchCity}
-          className="flex rounded-lg  py-2 px-6 space-x-6 items-center bg-white md:hidden"
-        >
+      <div className="relative w-full md:hidden">
+        <form onSubmit={onSearchCity} className="flex items-center w-full">
           <input
             type="text"
-            className="rounded-lg flex-1 outline-none block md:hidden"
+            className="rounded-tl-lg rounded-bl-lg flex-1 outline-none block bg-white p-2"
             placeholder="Search City"
             onChange={changeCityNameMobile}
             value={cityNameMobile}
           />
-          <button className="flex items-center justify-center" type="submit">
+          <button
+            className="flex items-center justify-center p-2 rounded-tr-lg rounded-br-lg bg-white outline-none border-none"
+            type="submit"
+          >
             SEARCH
           </button>
         </form>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 const Timer = () => {
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -10,7 +10,7 @@ const Timer = () => {
       clearInterval(interval);
     };
   }, []);
-  return <h2 className="text-xl md:text-2xl">{time}</h2>;
+  return <h2 className="text-2xl text-white md:text-3xl">{time}</h2>;
 };
 
 export default Timer;
