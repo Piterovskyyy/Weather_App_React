@@ -52,7 +52,6 @@ const WorldMap: React.FC<WorldMapProps> = ({
 
   const handleCountryClick = (geo: GeographiesProps): void => {
     const { name, capital } = geo.properties;
-    console.log(capital);
     setSelectedCountry({
       name: name as string,
       capital: capital as string,
@@ -77,7 +76,12 @@ const WorldMap: React.FC<WorldMapProps> = ({
               [900, 800],
             ]}
           >
-            <Sphere stroke="#000" strokeWidth={0.3} />
+            <Sphere
+              id="sphere"
+              fill="transparent"
+              stroke="#000"
+              strokeWidth={0.3}
+            />
             <Graticule stroke="#000" strokeWidth={0.3} />
             <Geographies geography={geoMap}>
               {({ geographies }) =>
