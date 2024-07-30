@@ -5,7 +5,7 @@ const RootLayout = () => {
   return (
     <>
       <NavPanel />
-      <main className="flex flex-col max-w-full md:flex-1 md:pl-[64px]">
+      <main className="flex flex-col max-w-full flex-1 md:pl-[64px]">
         <Header></Header>
         <Outlet />
       </main>

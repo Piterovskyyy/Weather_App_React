@@ -89,7 +89,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex flex-col p-4 mx-auto items-center space-y-2 md:flex-row md:space-y-0 md:w-full md:mx-0 md:justify-between md:px-12 lg:px-24 md:space-x-6 ">
+    <header className="flex flex-col p-4 mx-auto items-center space-y-2 md:flex-row md:space-y-0 w-full md:mx-0 md:justify-between md:px-12 lg:px-24 md:space-x-6 ">
       <Link to="/">
         <h1 className="font-bold text-2xl md:text-4xl">Weather App</h1>
       </Link>
