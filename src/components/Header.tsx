@@ -68,10 +68,14 @@ const Header = () => {
         state: { cityName: cityName },
       });
       setCityName("");
+      setAutoComplateData(null);
     }
     if (cityNameMobile.trim().length > 0) {
-      navigate("/" + cityNameMobile);
+      navigate("/" + cityNameMobile, {
+        state: { cityNameMobile: cityNameMobile },
+      });
       setCityNameMobile("");
+      setAutoComplateData(null);
     }
   };
   const changeCityName = (event: React.ChangeEvent<HTMLInputElement>) => {

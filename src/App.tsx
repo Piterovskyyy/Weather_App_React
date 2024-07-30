@@ -5,12 +5,17 @@ import Details from "./components/Details";
 import { loader as DetailsLoader } from "./components/Details";
 import ErrorDetails from "./errors/ErrorDetails";
 import { FavouriteCitiesProvider } from "./Context/FavouriteCitiesContext";
+import WorldMap from "./components/Map";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
+      {
+        path: "/",
+        element: <WorldMap />,
+      },
       {
         path: "/:cityName",
         element: <Details />,
