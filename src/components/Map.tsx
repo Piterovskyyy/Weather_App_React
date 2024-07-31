@@ -235,15 +235,15 @@ const WorldMap: React.FC<WorldMapProps> = ({
             )}
           </ZoomableGroup>
         </ComposableMap>
-        <div>
+        <div className=" p-4">
           <p className="text-center text-gray-500 text-sm opacity-80">
             Click on a country to see its capital and weather. Zoom in and out
             using your mouse, touchscreen, or the zoom buttons.
           </p>
         </div>
         <div
-          className="absolute top-24 md:top-32 w-full flex space-x-2 justify-center"
-          style={{ zIndex: 1000 }}
+          className="absolute top-16 md:top-32 w-full flex space-x-2 justify-center"
+          style={{ zIndex: 20 }}
         >
           <button
             onClick={zoomIn}
