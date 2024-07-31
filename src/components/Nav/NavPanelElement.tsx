@@ -7,6 +7,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 
 const NavPanelElement: React.FC<{
   city: string;
+  setIsNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }> = (props) => {
   const [fetchedCities, setFetchedCities] = useState<weatherDataInterface>();
   const [weatherIcon, setWeatherIcon] = useState("");
@@ -51,6 +52,9 @@ const NavPanelElement: React.FC<{
           return classes;
         }}
         to={`/${name}`}
+        onClick={() => {
+          props.setIsNavOpen(false);
+        }}
       >
         <div className="text-left">{name}</div>
         <div className="flex justify-center items-center text-white">

@@ -57,7 +57,10 @@ const NavPanel = () => {
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
                           >
-                            <NavPanelElement city={data.city} />
+                            <NavPanelElement
+                              city={data.city}
+                              setIsNavOpen={setIsNavOpen}
+                            />
                           </li>
                         )}
                       </Draggable>
